@@ -4,10 +4,14 @@ import { handleChange } from "./../actions/handleChange";
 function Input() {
   const dispatch = useDispatch();
   const text = useSelector((state) => state.handleChange);
-  const InputRef = useRef();
+  const onEdit = useSelector((state) => state.onEdit);
+  const InputRef = useRef(null);
   useEffect(() => {
     InputRef.current.focus();
   }, []);
+  useEffect(() => {
+    InputRef.current.focus();
+  }, [onEdit]);
 
   return (
     <div className="p-2">
