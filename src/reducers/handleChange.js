@@ -1,6 +1,6 @@
 export const handleChange = (state = "", action) => {
   switch (action.type) {
-    case "INIT":
+    case "TEXT":
       return action.payload;
     default:
       return state;

@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import {} from "./activityReducer";
+import { activityReducer } from "./activityReducer";
 import { handleChange } from "./handleChange";
-export const reducers = combineReducers({ handleChange });
+export const reducers = combineReducers({ handleChange, activityReducer });
