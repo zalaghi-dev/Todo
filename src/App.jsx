@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./layout/Header";
 import "./assets/fonts/fontawesome/css/all.css";
@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import logo from "./assets/images/dark.png";
 import { useSelector } from "react-redux";
 function App() {
+  
   const show = useSelector((state) => state.onShow);
   return (
     <div>
@@ -16,7 +17,7 @@ function App() {
         <Cards />
       ) : (
         <img
-          style={{ width: "300px"}}
+          style={{ width: "300px" }}
           alt="logo"
           className="img-fluid m-auto d-block "
           src={logo}
